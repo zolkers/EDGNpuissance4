@@ -1,4 +1,4 @@
-package fr.zolkers.core.players.algorithme;
+package fr.zolkers.algorithme;
 
 import fr.zolkers.core.Game;
 import fr.zolkers.core.Grid;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class MCTS {
+public class EDGNRobotMCTS {
 
     private static final int SIMULATIONS = 10000;
 

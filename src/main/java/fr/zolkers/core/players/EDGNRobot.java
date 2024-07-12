@@ -1,7 +1,7 @@
 package fr.zolkers.core.players;
 
 import fr.zolkers.core.Grid;
-import fr.zolkers.core.players.algorithme.MCTS;
+import fr.zolkers.algorithme.EDGNRobotMCTS;
 
 public class EDGNRobot extends Player implements Robot {
 
@@ -11,7 +11,7 @@ public class EDGNRobot extends Player implements Robot {
 
     @Override
     public int move(Grid grid) {
-        MCTS mcts = new MCTS();
+        EDGNRobotMCTS mcts = new EDGNRobotMCTS();
         return mcts.findBestMove(grid, this.getColor());
     }
 }
