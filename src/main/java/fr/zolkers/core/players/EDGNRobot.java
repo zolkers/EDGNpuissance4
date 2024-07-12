@@ -1,7 +1,7 @@
 package fr.zolkers.core.players;
 
 import fr.zolkers.core.Grid;
-import fr.zolkers.algorithme.EDGNRobotMCTS;
+import fr.zolkers.algorithm.EDGNRobotMCTS;
 
 public class EDGNRobot extends Player implements Robot {
 

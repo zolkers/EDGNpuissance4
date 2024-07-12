@@ -1,4 +1,4 @@
-package fr.zolkers.algorithme;
+package fr.zolkers.algorithm;
 
 import fr.zolkers.core.Game;
 import fr.zolkers.core.Grid;

@@ -2,7 +2,7 @@ package fr.zolkers.core.players;
 
 public abstract class Player {
 
-    private char color;
+    private final char color;
 
     public Player(char color) {
         this.color = color;

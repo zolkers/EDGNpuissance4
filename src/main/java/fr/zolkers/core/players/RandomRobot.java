@@ -6,7 +6,6 @@ import fr.zolkers.core.Token;
 import java.util.Random;
 
 public class RandomRobot extends Player implements Robot {
-    public final static int DIFFICULTY = 0;
     private final Random random = new Random();
     public RandomRobot(char color) {
         super(color);
