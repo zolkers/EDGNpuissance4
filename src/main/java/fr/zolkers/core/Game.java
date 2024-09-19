@@ -4,6 +4,15 @@ import java.util.List;
 
 public class Game {
 
+    public static boolean hasDrawn(Grid grid) {
+        for (int x = 0; x < grid.getWidth(); x++) {
+            if (grid.setCurrentTokenY(x) < grid.getHeight()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     public static boolean hasWon(Grid grid, Token token) {
         int x = token.x();

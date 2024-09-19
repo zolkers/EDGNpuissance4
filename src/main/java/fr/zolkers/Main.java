@@ -3,6 +3,7 @@ package fr.zolkers;
 import fr.zolkers.core.*;
 import fr.zolkers.core.players.*;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -17,12 +18,11 @@ public class Main {
         Player player1 = new Human('Y');
         Player player2;
 
-        System.out.println("Choisissez le type de robot (1: RandomRobot, 2: EDGNRobot): ");
-        int robotChoice = scanner.nextInt();
-
         if (isHumanOpponent) {
             player2 = new Human('R');
         } else {
+            System.out.println("Choisissez le type de robot (1: RandomRobot, 2: EDGNRobot): ");
+            int robotChoice = scanner.nextInt();
             if (robotChoice == 1) {
                 player2 = new RandomRobot('R');
             } else {
@@ -30,7 +30,14 @@ public class Main {
             }
         }
 
-        Player currentPlayer = player1;
+        int randomPlayer = (int) Math.round( Math.random());
+
+        Player currentPlayer;
+        if(randomPlayer == 0) {
+            currentPlayer = player1;
+        } else {
+            currentPlayer = player2;
+        }
         while (true) {
             int x;
             if (currentPlayer instanceof Robot) {
@@ -49,6 +56,9 @@ public class Main {
 
             if (Game.hasWon(grid, currentToken)) {
                 System.out.println(color + " a gagné la partie");
+                break;
+            } else if (Game.hasDrawn(grid)) {
+                System.out.println("DRAW");
                 break;
             }
 
