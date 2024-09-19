@@ -3,8 +3,9 @@ package fr.zolkers;
 import fr.zolkers.core.*;
 import fr.zolkers.core.players.*;
 
-import java.util.Random;
+import javax.swing.*;
 import java.util.Scanner;
+
 
 public class Main {
 
@@ -38,6 +39,7 @@ public class Main {
         } else {
             currentPlayer = player2;
         }
+        grid.renderGrid();
         while (true) {
             int x;
             if (currentPlayer instanceof Robot) {

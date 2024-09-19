@@ -1,5 +1,6 @@
 package fr.zolkers.core;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +46,8 @@ public class Grid {
     }
 
     public void renderGrid() {
+        JFrame frame = new JFrame();
+
         char[][] grid = new char[height][width];
 
         for (int i = 0; i < height; i++) {
@@ -68,5 +71,8 @@ public class Grid {
         }
 
         System.out.println(sb);
+        frame.setSize(1920,1080);
+        frame.setLayout(null);
+        frame.setVisible(true);
     }
 }
