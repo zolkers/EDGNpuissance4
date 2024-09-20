@@ -45,8 +45,7 @@ public class Grid {
         return maxYfromList + 1;
     }
 
-    public void renderGrid() {
-        JFrame frame = new JFrame();
+    public void renderGrid(JFrame frame) {
 
         char[][] grid = new char[height][width];
 
@@ -71,8 +70,5 @@ public class Grid {
         }
 
         System.out.println(sb);
-        frame.setSize(1920,1080);
-        frame.setLayout(null);
-        frame.setVisible(true);
     }
 }
